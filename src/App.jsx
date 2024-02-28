@@ -1,14 +1,19 @@
 
 import './App.css'
+import Card from './components/Card'
 
 function App() {
-
+    
+  const data ={
+    name : "aditya",
+    roll_no : 43758718964,
+    hero : "batman"
+};
 
   return (
     <>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <h1 className='text-6xl font-bold text-sky-600'>Tailwinds</h1>
+    <Card object ={data}/>
     </>
   )
 }
