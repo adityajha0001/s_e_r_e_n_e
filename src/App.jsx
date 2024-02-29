@@ -1,20 +1,25 @@
 
+import { useState } from 'react'
 import './App.css'
-import Card from './components/Card'
+
 
 function App() {
-    
-  const data ={
-    name : "aditya",
-    roll_no : 43758718964,
-    hero : "batman"
-};
+
+  let [color,setColor] = useState("olive");
+  
 
   return (
-    <>
-    <h1 className='text-6xl font-bold text-sky-600'>Tailwinds</h1>
-    <Card object ={data}/>
-    </>
+    <div className='h-screen w-full' style={{backgroundColor : color}}>
+      <div className='flex item-center justify-center grid-cols gap-8 pt-96'>
+        <button className=" h-16 w-28 bg-red-700 border-4 "  onClick={()=>{setColor(color = 'red')}}>red
+        </button>
+        <button className="h-16 w-28 bg-violet-500  border-4" onClick={()=>{setColor(color = 'violet')}}>rose
+        </button>
+        <button className="h-16 w-28 bg-lime-400  border-4" onClick={()=>{setColor(color = 'lime')}}>sky
+        </button>
+      </div>
+    </div>
+    
   )
 }
 
